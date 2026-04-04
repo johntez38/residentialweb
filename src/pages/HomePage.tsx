@@ -1,12 +1,15 @@
-import { Header } from '@/components/Header';
-import { useGeolocation } from '@/hooks/useGeolocation';
-import { useNearbyProperties } from '@/hooks/useNearbyProperties';
-import { PropertyCard } from '@/components/PropertyCard';
+@ -0,0 +1,79 @@
+import { Header } from '../components/Header';
+import { useGeolocation } from '../hooks/useGeolocation';
+import { useNearbyProperties } from '../hooks/useNearbyProperties';
+import { PropertyCard } from '../components/PropertyCard';
 import { MapPin, Navigation, Home } from 'lucide-react';
+
 export function HomePage() {
   const { loading: gpsLoading, latitude, longitude, error } = useGeolocation();
   const { nearbyProperties, loading: propertiesLoading } = useNearbyProperties(latitude, longitude, 5);
-return (
+
+  return (
     <div className="min-h-screen bg-gray-50">
       <Header />
       
