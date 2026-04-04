@@ -1,13 +1,14 @@
 import { useState } from 'react';
-import { Header } from '@/components/Header';
-import { PropertyCard } from '@/components/PropertyCard';
-import { mockProperties } from '@/data/mockData';
-import type { Property } from '@/data/mockData'; // Added missing type
-import { Search, Filter } from 'lucide-react'; // Match your actual usage
+import { Header } from '../components/Header';
+import { PropertyCard } from '../components/PropertyCard';
+import { mockProperties } from '../data/mockData';
+import { Search, Sliders } from 'lucide-react';
+import { Input } from '../components/ui/input';
+import { Button } from '../components/ui/button';
 
 export function SearchPage() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [filteredProperties, setFilteredProperties] = useState<Property[]>(mockProperties);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [priceRange, setPriceRange] = useState<[number, number]>([0, 100000]);
   
   const filteredProperties = mockProperties.filter(property => 
     property.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
