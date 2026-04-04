@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import { Header } from '@/components/Header';
-import { PropertyMap } from '@/components/PropertyMap';
-import { useGeolocation } from '@/hooks/useGeolocation';
-import { mockProperties } from '@/data/mockData';
-import type { Property } from '@/data/mockData';
+import { Header } from '../components/Header';
+import { PropertyMap } from '../components/PropertyMap';
+import { useGeolocation } from '../hooks/useGeolocation';
+import { mockProperties } from '../data/mockData';
+import { Property } from '../data/mockData';
 import { Navigation } from 'lucide-react';
 
 export function MapViewPage() {
