@@ -1,4 +1,3 @@
-@ -0,0 +1,79 @@
 import { Header } from '../components/Header';
 import { useGeolocation } from '../hooks/useGeolocation';
 import { useNearbyProperties } from '../hooks/useNearbyProperties';
