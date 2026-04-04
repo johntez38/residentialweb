@@ -1,10 +1,8 @@
 import { useState } from 'react';
-import { Header } from '../components/Header';
-import { PropertyCard } from '../components/PropertyCard';
-import { mockProperties } from '../data/mockData';
-import { Search, Sliders } from 'lucide-react';
-import { Input } from '../components/ui/input';
-import { Button } from '../components/ui/button';
+import { Header } from '@/components/Header';
+import { PropertyCard } from '@/components/PropertyCard';
+import { mockProperties } from '@/data/mockData';
+import { Search, MapPin, Filter } from 'lucide-react';
 
 export function SearchPage() {
   const [searchTerm, setSearchTerm] = useState('');
