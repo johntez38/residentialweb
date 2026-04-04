@@ -1,5 +1,5 @@
 {
-  predeploy": "npm run build",
+  "predeploy": "npm run build",
 "deploy": "gh-pages -d dist"  
   "name": "residential-gps-property-app",
   "private": true,
